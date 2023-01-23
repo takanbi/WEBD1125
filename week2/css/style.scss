@@ -1,18 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
 * {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
-
+@font-face {
+    font-family: pirulen;
+    src: url("../fonts/pirulen_rg.ttf");
+}
+@font-face {
+    font-family: neuropol;
+    src: url("../fonts/neuropol.otf");
+}
 #container {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+//   height: 100vh;
+  background-color: black;
+  header {
+    height: 5em;
     background-color: red;
-    header {
-        #bars {
-            width: 4em;
+    .bars {
+      width: 4em;
+      .bars-path,
+      .w-6,
+      .h-6 {
+        fill: #fff;
+      }
+    }
+    .user {
+      width: 4em;
+      .user-path {
+        //   cursor: pointer;
+          cursor: url(../images/redBoxx.png), auto;
+        fill: #fff;
+        transition: all 300ms linear;
+      }
+      .user-path:hover {
+        fill: black;
+      }
+      .user-path:active {
+        fill: green;
+      }
+    }
+  } 
+  header::before {
+      content: url(../images/redBoxx.jpg);
+  }
+  header::after {
+      content: url(../images/redBoxx.jpg);
+  }
+  //header ends here
+  main {
+    background-color: rgb(47, 79, 79);
+    // height: calc(100vh - 5em);
+    section#sect1 {
+      width: 600px;
+      width: 100%;
+      height: 300px;
+      background-color: #fff;
+      margin: 0 auto;
+   
+      h1 {
+        text-align: center;
+      }
+      div {
+        background-color: orange;
+        font-size: 0.85em;
+        // padding: 2em;
+        // width: 100%;
+        // height: 50%;
+        // clear: right;
+        img {
+          width: 60%;
+          float: right;
+        }
+      }
+      //clear fix hack
+        div::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     }
+// section#sect1 ends here/////////////////////////
+    section#sect2 {
+        background-color: darkturquoise;
+        clear: both;
+        padding: 70px 0;
+        text-align: center;
+    }
+// section#sect2 ends here/////////////////////////
+    section#sect3 {
+        background-color: rgb(0, 0, 0);
+        color: #FFF;
+        height: 140px;
+        line-height: 140px;
+        text-align: center;
+    }
+// section#sect3 ends here/////////////////////////
+    section#sect4 {
+        background-color: rgb(47, 79, 79);
+        color: orange;
+        height: 140px;
+        position: relative;
+        p {
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+// section#sect4 ends here/////////////////////////
+    section#sect5 {
+        background-color: rgb(0,0,0);
+        color: orange;
+        height: 140px;
+        position: relative;
+        line-height: 140px;
+        text-align: center;
+        font-family: pirulen;
+        font-family: neuropol;
+        // font-weight: bold;
+        font-size: 3em;
+    }
+
+  }
 }
