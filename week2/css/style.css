@@ -138,4 +138,16 @@
   font-family: neuropol;
   font-size: 3em;
 }
+
+#container main section#sect6 {
+  background-color: darkturquoise;
+  color: darkslategray;
+  height: 140px;
+  position: relative;
+  line-height: 140px;
+  text-align: center;
+  font-family: pirulen;
+  font-family: neuropol;
+  font-size: 4em;
+}
 /*# sourceMappingURL=style.css.map */
