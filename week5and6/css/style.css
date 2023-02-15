@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  background-color: black;
+}
+
+#container .bkgd {
+  height: 128px;
+}
+
+#container #multi-bkgd {
+  background-image: url("../images/boxes.svg"), url("../images/grad-box.svg");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+}
+
+#container #bkgd-size {
+  background-color: #fff;
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+}
+
+#container #large-imgz {
+  width: 100%;
+  height: 400px;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*
+        The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
+
+        The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.
+    */
+}
+
+#container #large-imgz section {
+  width: 50%;
+  height: 100%;
+}
+
+#container #large-imgz #large-imgz-1 {
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#container #large-imgz #large-imgz-2 {
+  background-image: url("../images/boxes.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container2 {
+  background-image: url("../images/technology.jpeg");
+  background-size: cover;
+  position: relative;
+}
+
+#container2 h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+  color: #F00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#container3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(violet));
+  background-image: linear-gradient(red, orange, yellow, green, blue, violet);
+}
+
+#container4 {
+  background-image: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#container5 .gallery {
+  float: left;
+  width: calc(100vw/4);
+  padding: 1em;
+}
+
+#container5 .gallery a img {
+  width: 100%;
+  height: auto;
+}
+
+#container6 {
+  background-color: black;
+  position: relative;
+}
+
+#container6 footer {
+  width: 100%;
+  height: 100px;
+  background-color: blanchedalmond;
+  position: absolute;
+  bottom: 0;
+}
+
+#container6 footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+#container6 footer ul li {
+  width: 100px;
+  height: 100px;
+}
+
+#container6 footer ul li a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#container6 footer ul li a#linkedIn {
+  background: url("../images/social-color.png") 0px 0px;
+}
+
+#container6 footer ul li a#facebook {
+  background: url("../images/social-color.png") 100px 0px;
+}
+
+#container6 footer ul li a#github {
+  background: url("../images/social-color.png") 200px 0px;
+}
+
+#container6 footer ul li a#twitter {
+  background: url("../images/social-color.png") 100px 0px;
+}
+
+#container6 footer ul li a#linkedIn:hover {
+  background: url("../images/social-grey.png") 0px 0px;
+}
+
+#container6 footer ul li a#facebook:hover {
+  background: url("../images/social-grey.png") 100px 0px;
+}
+
+#container6 footer ul li a#github:hover {
+  background: url("../images/social-grey.png") 200px 0px;
+}
+
+#container6 footer ul li a#twitter:hover {
+  background: url("../images/social-grey.png") 100px 0px;
+}
+/*# sourceMappingURL=style.css.map */

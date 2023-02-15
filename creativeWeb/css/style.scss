@@ -5,55 +5,165 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-$color1: rgb(129,113,6);
-$color2: rgb(101,101,101);
-$color3: rgb(22,16,56);
-$color4: rgb(54,40,129);
-$color5: rgb(56,51,16);
-$color6: rgb(255,255,255);
+$color1: rgb(129, 113, 6);
+$color2: rgb(101, 101, 101);
+$color3: rgb(22, 16, 56);
+$color4: rgb(54, 40, 129);
+$color5: rgb(56, 51, 16);
+$color6: rgb(255, 255, 255);
 
 #container {
-    width: 100%;
-    height: 100vh;
-    background-color: $color3;
+  width: 100%;
+  height: 100vh;
+  background-color: $color3;
+  position: relative;
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1em 3em;
+    h1 {
+      text-transform: uppercase;
+      span#creative {
+        color: $color1;
+      }
+      span#web {
+        color: $color6;
+        font-size: 1.5em;
+        margin-left: 0.25em;
+      }
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      margin-left: auto;
+      li {
+        padding: 0 1em;
+        a {
+          text-decoration: none;
+          color: $color6;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  main {
     position: relative;
-    nav {
-        display: flex;
-        align-items: center;
-        padding: 1em;
-       h1 {
-           text-transform: uppercase;
-           span#creative {
-               color: $color1;
-           }
-           span#web {
-               color: $color6;
-               font-size: 1.5em;
-               margin-left: 0.25em;
-           }
-       }
-       ul {
-           display: flex;
-           list-style: none;
-           margin-left: auto;
-           li { padding: 0 1em;
-               a {
-                   text-decoration: none;
-                   color: $color6;
-                   text-transform: uppercase;
-               }
-           }
-       }
-    }
-    main {
+    section {
+      display: flex;
+      padding: 1em 3em;
+      #leftCol {
         position: relative;
-
+        z-index: 0;
+        width: 40%;
+        #boldTxt {
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          h1 {
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 5em;
+            margin: 0.5em 0;
+            color: $color1;
+          }
+        }
+        #whiteBox {
+          position: absolute;
+          z-index: -2;
+          top: 100px;
+          left: 40px;
+          width: 350px;
+          height: 350px;
+          background-color: $color6;
+          div {
+            width: 100%;
+            height: 50px;
+            position: relative;
+          }
+          #greyBox {
+            background-color: $color2;
+            width: 300px;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+          }
+          #darkGold {
+            background-color: $color5; 
+            position: absolute;
+            width: 300px;
+            left: 50px;
+            top: 250px;
+          }
+        }
+        #lightpurpCirc {
+          position: absolute;
+          z-index: -3;
+          top: 250px;
+          left: 150px;
+          width: 350px;
+          height: 350px;
+          background-color: $color4;
+          border-radius: 50%;
+        }
+      }
+      #rightCol {
+        position: relative;
+        z-index: 0;
+        margin-left: auto;
+        width: 50%;
+        // height: 100px;
+        background-color: $color6;
+        #purpleCirc {
+          width: 200px;
+          height: 200px;
+          background-color: $color1;
+          border-radius: 50%;
+          position: absolute;
+          top: -75px;
+          left: -100px;
+          z-index: -1;
+        }
+        h1 {
+          padding-left: 0.75em;
+          color: $color1;
+        }
+        img {
+          width: 100%;
+        }
+        p {
+          padding: 1em;
+        }
+      }
     }
-    footer {
-        height: 100px;
-        background-color: $color1;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+  }
+  footer {
+    height: 100px;
+    background-color: $color4;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    div.copy {
+        color: $color1;
+        padding-left: 50px;
     }
+    div.century {
+        color: white;
+        padding-left: 400px;
+       display: flex;
+    }
+    div#social {
+        display: flex;
+        margin-left: auto;
+        margin-right: 2em;
+        svg {
+            width: 30px;
+            margin: 0 0.5em;
+            fill: rgb(255, 255, 255);
+        }
+    }
+  }
 }

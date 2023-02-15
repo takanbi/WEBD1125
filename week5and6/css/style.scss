@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+#container {
+  background-color: black;
+  .bkgd {
+    height: 128px;
+  }
+  #multi-bkgd {
+    background-image: url("../images/boxes.svg"), url("../images/grad-box.svg");
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+  }
+  #bkgd-size {
+    background-color: #fff;
+    background-image: url("../images/boxes.svg");
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+  }
+  #large-imgz {
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    section {
+      width: 50%;
+      height: 100%;
+    }
+    #large-imgz-1 {
+      background-image: url("../images/boxes.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #large-imgz-2 {
+      background-image: url("../images/boxes.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /*
+        The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
+
+        The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.
+    */
+  }
+}
+
+    #container2 {
+        background-image: url("../images/technology.jpeg");
+        background-size: cover;
+        position: relative;
+        h1 {
+            font-size: 5em;
+            text-transform: uppercase;
+            color: #F00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // text-align: center;
+        }
+    }
+    #container3 {
+        background-image: linear-gradient( red, orange, yellow, green, blue, violet);
+    }
+    #container4 {
+        background-image: radial-gradient( circle,red, orange, yellow, green, blue, indigo,violet);
+    }
+    #container5 {
+        .gallery {
+            float: left;
+            width: calc(100vw/4);
+            padding: 1em;
+            a {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+#container6 {
+  background-color: black;
+  position: relative;
+  footer {
+    width: 100%;
+    height: 100px;
+    background-color: blanchedalmond;
+    position: absolute;
+    bottom: 0;
+    ul {
+      display: flex;
+      list-style-type: none;
+      li {
+        width: 100px;
+        height: 100px;
+        a {
+          width: 100px;
+          height: 100px;
+          display: block;//needed otherwise content will not show
+          transition: all 200ms linear;
+        }
+        a#linkedIn {
+          background: url("../images/social-color.png") 0px 0px;
+        }
+        a#facebook {
+          background: url("../images/social-color.png") 100px 0px;
+        }
+        a#github {
+          background: url("../images/social-color.png") 200px 0px;
+        }
+        a#twitter {
+          background: url("../images/social-color.png") 100px 0px;
+        }
+        //hover states
+        a#linkedIn:hover {
+          background: url("../images/social-grey.png") 0px 0px;
+        }
+        a#facebook:hover {
+          background: url("../images/social-grey.png") 100px 0px;
+        }
+        a#github:hover {
+          background: url("../images/social-grey.png") 200px 0px;
+        }
+        a#twitter:hover {
+          background: url("../images/social-grey.png") 100px 0px;
+        }
+      }
+    }
+  }
+}
+
