@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2em;
+}
+
+.container nav span {
+  text-transform: uppercase;
+}
+
+.container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+
+.container nav ul li a {
+  display: inline-block;
+  padding: 0 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+
+.container nav ul li a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .container nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    background-color: transparent;
+  }
+  .container nav span {
+    display: inline-block;
+    padding: 0 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .container nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container nav ul li {
+    text-align: center;
+    margin: 0.5em 0;
+  }
+  .container nav ul li a {
+    color: white;
+  }
+}
+
+li#gallery {
+  position: relative;
+}
+
+ul#gallery-drop {
+  display: none;
+  position: absolute;
+  top: 2em;
+  background-color: white;
+}
+
+ul#gallery-drop li {
+  padding: 1em 0;
+}
+
+li#gallery:hover ul#gallery-drop {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

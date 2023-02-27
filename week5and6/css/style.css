@@ -165,4 +165,60 @@
 #container6 footer ul li a#twitter:hover {
   background: url("../images/social-grey.png") 100px 0px;
 }
+
+#container7 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#073C91), to(#000E7A));
+  background-image: linear-gradient(#073C91, #000E7A);
+}
+
+#container7 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+
+#container7 section figure {
+  padding: 0.5em;
+  background-color: white;
+  display: inline-block;
+  width: 25%;
+  margin: 0 0.5em;
+  border-radius: 20px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+#container7 section figure img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+#container7 section figure figcaption {
+  background-color: white;
+  font-size: 0.75em;
+  padding: 1.5em;
+}
+
+#container7 section figure:hover {
+  -webkit-box-shadow: 20px 20px 20px #000D54;
+          box-shadow: 20px 20px 20px #000D54;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 0.15em solid red;
+}
+
+.xyz {
+  border-radius: 5em;
+  border: 10px solid red;
+}
 /*# sourceMappingURL=style.css.map */
