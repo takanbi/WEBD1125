@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .nav {
+  position: fixed;
+  width: 100vw;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+}
+
+.container .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.container .nav__listlogo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.container .nav__listlogo svg {
+  width: 2rem;
+  -webkit-transition: fill 250ms ease-in;
+  transition: fill 250ms ease-in;
+}
+
+.container .nav__listlogo svg:hover, .container .nav__listlogo svg:focus {
+  fill: gray;
+}
+
+.container .nav__listitem {
+  list-style: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.container .nav__listitem::after {
+  content: "";
+  width: 0;
+  height: 0.15rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  background-color: blue;
+  -webkit-transition: width 200ms ease-in;
+  transition: width 200ms ease-in;
+}
+
+.container .nav__listitem:hover::after, .container .nav__listitem:focus::after {
+  width: 80%;
+}
+
+.container .nav__listitem:hover ul, .container .nav__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container .nav__listitemdrop {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 12rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.container .nav__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.container .nav__listitemdrop li:hover, .container .nav__listitemdrop li:focus {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.container main {
+  position: relative;
+  top: 67px;
+  z-index: -1;
+  height: calc(100vh - 67px);
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container main section {
+  position: relative;
+  top: 3rem;
+  width: 80%;
+  height: 80%;
+  background-color: blue;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.container main section h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.container main section form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container main section form label {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.container main section form input[type=text], .container main section form input[type=email], .container main section form textarea {
+  color: gray;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.container main section form textarea {
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.container main section form button#button {
+  background-color: white;
+  color: blue;
+  font-size: 1.5rem;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  display: inline-block;
+  margin: 1rem auto 0 auto;
+}
+
+.container footer {
+  background-color: red;
+  height: 67px;
+  position: relative;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
