@@ -19,6 +19,7 @@ a {
 
 .container .nav {
   position: fixed;
+  z-index: 1;
   width: 100vw;
   -webkit-box-shadow: 0 0 10px gray;
           box-shadow: 0 0 10px gray;
@@ -123,7 +124,6 @@ a {
 .container main {
   position: relative;
   top: 67px;
-  z-index: -1;
   height: calc(100vh - 67px);
   width: 100%;
   background-color: white;
@@ -135,7 +135,7 @@ a {
           justify-content: center;
 }
 
-.container main section {
+.container main section#main-section {
   position: relative;
   top: 3rem;
   width: 80%;
@@ -145,12 +145,56 @@ a {
   border-radius: 1rem;
 }
 
-.container main section h1 {
+.container main section#main-section h1 {
   color: white;
   font-size: 2.5rem;
 }
 
-.container main section form {
+.container main section#main-section div#main-section-div {
+  height: 100%;
+  width: 100%;
+}
+
+.container main section#main-section div#main-section-div section#Img1 {
+  height: 70%;
+  width: 100%;
+  background-color: red;
+  border-radius: 1rem;
+  position: relative;
+  background-image: url(../images/cityscape.jpg);
+  background-size: contain;
+}
+
+.container main section#main-section div#main-section-div img#city {
+  width: 100%;
+  -webkit-transition: -webkit-filter 200ms ease-in;
+  transition: -webkit-filter 200ms ease-in;
+  transition: filter 200ms ease-in;
+  transition: filter 200ms ease-in, -webkit-filter 200ms ease-in;
+  -webkit-filter: sepia(100%);
+          filter: sepia(100%);
+}
+
+.container main section#main-section div#main-section-div img#city:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.container main section#main-section div#main-section-div section#Img1-text {
+  padding: 0;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 4px 4px 10px #000;
+}
+
+.container main section#main-section form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,13 +205,13 @@ a {
           flex-direction: column;
 }
 
-.container main section form label {
+.container main section#main-section form label {
   color: white;
   font-size: 1.5rem;
   margin: 1rem 0;
 }
 
-.container main section form input[type=text], .container main section form input[type=email], .container main section form textarea {
+.container main section#main-section form input[type=text], .container main section#main-section form input[type=email], .container main section#main-section form textarea {
   color: gray;
   font-size: 1.25rem;
   padding: 0.5rem;
@@ -175,12 +219,12 @@ a {
   border: none;
 }
 
-.container main section form textarea {
+.container main section#main-section form textarea {
   height: 200px;
   margin-bottom: 1rem;
 }
 
-.container main section form button#button {
+.container main section#main-section form button#button {
   background-color: white;
   color: blue;
   font-size: 1.5rem;

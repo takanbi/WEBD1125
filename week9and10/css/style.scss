@@ -23,6 +23,7 @@ $blueColor: rgba(0, 0, 255, 1); //creating scss variables
     height: 100vh;
     .nav {
         position: fixed;
+        z-index: 1;
         width: 100vw;
         box-shadow: 0 0 10px $grayColor;
         &__list {
@@ -102,13 +103,13 @@ $blueColor: rgba(0, 0, 255, 1); //creating scss variables
     main {
         position: relative;
         top: 67px;
-        z-index: -1;
+        // z-index: -1;
         height: calc(100vh - 67px);
         width: 100%;
         background-color: $whiteColor; 
         display: flex;
         justify-content: center;
-        section {
+        section#main-section {
             position: relative;
             top: 3rem;
             width: 80%;
@@ -120,6 +121,50 @@ $blueColor: rgba(0, 0, 255, 1); //creating scss variables
                 color: $whiteColor;
                 font-size: 2.5rem;
             }
+            div#main-section-div {
+                height: 100%;
+                width: 100%;
+                // position: relative;
+                // overflow: hidden;
+                
+            section#Img1 {
+                height: 70%;
+                width: 100%;
+                background-color: red;
+                border-radius: $radius1;
+                position: relative;
+                background-image: url(../images/cityscape.jpg);
+                background-size: contain;
+            }
+            img#city {
+                // position: relative;
+                // z-index: 2;
+                width: 100%;
+                transition: filter 200ms ease-in;
+                // filter: invert(100%);
+                // filter: saturate(100%);
+                filter: sepia(100%);
+            }
+            img#city:hover {
+                filter: grayscale(100%);
+                cursor: pointer;
+            }
+            section#Img1-text {
+                // background-color: white;
+                padding: 0;
+                font-size:4em;
+                position: absolute;
+                // z-index: 3;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); // if I used image element
+                // transform: translate(-50%, -90%); // if I used the Img1 section
+                color:$whiteColor;
+                text-align: center;
+                text-shadow: 4px 4px 10px #000;
+
+            }
+        }
             form {
                 width: 100%;
                 display: flex;
