@@ -2,8 +2,7 @@
 * {
   padding: 0%;
   margin: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,7 +23,6 @@ header nav ul li {
   display: inline-block;
   padding: 1em 0.45em;
   cursor: pointer;
-  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
 
@@ -32,7 +30,6 @@ header nav ul li a {
   text-decoration: none;
   font-weight: 400;
   color: black;
-  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
 

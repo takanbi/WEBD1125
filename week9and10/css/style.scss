@@ -6,8 +6,8 @@
   font-family: "Montserrat", sans-serif;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 $radius: 0.2rem;
 $radius1: 1rem;
@@ -19,191 +19,244 @@ $blueColor: rgba(0, 0, 255, 1); //creating scss variables
 //     height: 50px;
 // }
 .container {
+  width: 100%;
+  height: 100vh;
+  .nav {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    box-shadow: 0 0 10px $grayColor;
+    &__list {
+      // .nav__list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+      margin: 0 2rem;
+
+      &logo {
+        // .nav__listlogo {
+        list-style: none;
+        margin-right: auto;
+        cursor: pointer;
+        svg {
+          // svg#infinity {
+          width: 2rem;
+          transition: fill 250ms ease-in;
+          &:hover,
+          &:focus {
+            fill: $grayColor;
+          }
+        }
+      }
+      &item {
+        list-style: none;
+        font-weight: bold;
+        position: relative;
+        padding: 1.5rem 1rem;
+        cursor: pointer;
+        &::after {
+          content: "";
+          width: 0;
+          height: 0.15rem;
+          border-radius: $radius;
+          position: absolute;
+          left: 1rem;
+          bottom: 0.8rem;
+          background-color: $blueColor;
+          transition: width 200ms ease-in;
+        }
+        &:hover::after,
+        &:focus::after {
+          width: 80%;
+        }
+        &:hover ul,
+        &:focus ul {
+          opacity: 1;
+          visibility: visible;
+        }
+        &drop {
+          position: absolute;
+          top: 4rem;
+          left: -1rem;
+          box-shadow: 0 0 10px $grayColor;
+          background-color: $whiteColor;
+          border-radius: $radius;
+          width: 12rem;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 200ms ease-in-out;
+          li {
+            list-style: none;
+            padding: 0.5rem;
+            border-radius: $radius;
+            transition: background-color 200ms ease-in-out;
+            &:hover,
+            &:focus {
+              background-color: $lightGrayColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    position: relative;
+    top: 67px;
+    // z-index: -1;
+    height: calc(100vh - 67px);
     width: 100%;
-    height: 100vh;
-    .nav {
-        position: fixed;
-        z-index: 1;
-        width: 100vw;
-        box-shadow: 0 0 10px $grayColor;
-        &__list {
-        // .nav__list {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 2rem;
-            margin: 0 2rem;
-           
-            &logo { 
-            // .nav__listlogo {
-                list-style: none;
-                margin-right: auto;
-                cursor: pointer;
-                svg {
-                // svg#infinity {
-                    width: 2rem;
-                    transition: fill 250ms ease-in;
-                    &:hover, &:focus {
-                        fill: $grayColor;
-                    }
-                }
-            }
-            &item {
-                list-style: none;
-                font-weight: bold;
-                position: relative;
-                padding: 1.5rem 1rem;
-                cursor: pointer;
-                &::after {
-                    content: "";
-                    width: 0;
-                    height: 0.15rem; 
-                    border-radius: $radius;
-                    position: absolute;
-                    left: 1rem;
-                    bottom: 0.8rem;
-                    background-color: $blueColor;
-                    transition: width 200ms ease-in;
-                }
-                &:hover::after, &:focus::after {
-                    width: 80%;
-                }
-                &:hover ul, &:focus ul {
-                    opacity: 1;
-                    visibility: visible;
-                }
-                &drop {
-                    position: absolute;
-                    top: 4rem;
-                    left: -1rem;
-                    box-shadow: 0 0 10px $grayColor;
-                    background-color: $whiteColor;
-                    border-radius: $radius;
-                    width: 12rem;
-                    padding: 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity 200ms ease-in-out;
-                    li {
-                        list-style: none;
-                        padding: 0.5rem;
-                        border-radius: $radius;
-                        transition: background-color 200ms ease-in-out;
-                        &:hover, &:focus {
-                            background-color: $lightGrayColor;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    main {
-        position: relative;
-        top: 67px;
-        // z-index: -1;
-        height: calc(100vh - 67px);
+    background-color: $whiteColor;
+    display: flex;
+    justify-content: center;
+    section#main-section {
+      position: relative;
+      top: 3rem;
+      width: 80%;
+      height: 80%;
+      min-height: 729px;
+      background-color: $blueColor;
+      padding: 3em;
+      border-radius: $radius1;
+      h1 {
+        color: $whiteColor;
+        font-size: 2.5rem;
+        margin-bottom: 1em;
+      }
+      div#main-section-div {
+        height: 100%;
         width: 100%;
-        background-color: $whiteColor; 
-        display: flex;
-        justify-content: center;
-        section#main-section {
-            position: relative;
-            top: 3rem;
-            width: 80%;
-            height: 80%;
-            background-color: $blueColor;
-            padding: 3rem;
+        // position: relative;
+        // overflow: hidden;
+        #main-section-div-section {
+          display: flex;
+          justify-content: space-evenly;
+          figure {
+            background-color: $whiteColor;
+            width: 30%;
             border-radius: $radius1;
-            h1 {
-                color: $whiteColor;
-                font-size: 2.5rem;
+            cursor: pointer;
+            // float: right;
+            img {
+              width: 100%;
+              border-radius: $radius1 $radius1 0 0;
+              transition: filter 250ms cubic-bezier(0.19, 1, 0.22, 1);
             }
-            div#main-section-div {
-                height: 100%;
-                width: 100%;
-                // position: relative;
-                // overflow: hidden;
-                
-            section#Img1 {
-                height: 70%;
-                width: 100%;
-                background-color: red;
-                border-radius: $radius1;
-                position: relative;
-                background-image: url(../images/cityscape.jpg);
-                background-size: contain;
+            figcaption {
+              text-align: center;
+              padding: 1em 0;
+              p {
+                text-align: left;
+                padding: 1em;
+              }
             }
-            img#city {
-                // position: relative;
-                // z-index: 2;
-                width: 100%;
-                transition: filter 200ms ease-in;
-                // filter: invert(100%);
-                // filter: saturate(100%);
-                filter: sepia(100%);
-            }
-            img#city:hover {
-                filter: grayscale(100%);
-                cursor: pointer;
-            }
-            section#Img1-text {
-                // background-color: white;
-                padding: 0;
-                font-size:4em;
-                position: absolute;
-                // z-index: 3;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%); // if I used image element
-                // transform: translate(-50%, -90%); // if I used the Img1 section
-                color:$whiteColor;
-                text-align: center;
-                text-shadow: 4px 4px 10px #000;
+          }
+          figure:hover img {
+            filter: sepia(100%);
+          }
+          figure:hover {
+            box-shadow: $radius $radius1 $radius1 rgba(0, 0, 0, 0.4);
+          }
+        }
 
-            }
+        section#Img1 {
+          height: 70%;
+          width: 100%;
+          // background-color: red;
+          border-radius: $radius1;
+          position: relative;
+          background-image: url(../images/cityscape.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: $radius solid $whiteColor;
         }
-            form {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                label {
-                    color: $whiteColor;
-                    font-size: 1.5rem;
-                    margin: 1rem 0;
-                }
-                input[type=text], input[type=email], textarea{
-                    color: $grayColor;
-                    font-size: 1.25rem;
-                    padding: 0.5rem;
-                    border-radius: $radius;
-                    border: none;
-                }
-                textarea {
-                    height: 200px;
-                    margin-bottom: 1rem;
-                }
-                button#button {
-                    background-color: $whiteColor;
-                    color: $blueColor;
-                    font-size: 1.5rem;
-                    width: 50%;
-                    padding: 1rem;
-                    border-radius: $radius;
-                    border: none;
-                    display: inline-block;
-                    margin: 1rem auto 0 auto;
-                }
-            }
+        img#city {
+          // position: relative;
+          // z-index: 2;
+          width: 100%;
+          transition: filter 200ms ease-in;
+          // filter: invert(100%);
+          // filter: saturate(100%);
+          filter: sepia(100%);
         }
-    }
-    footer {
-        background-color: red;
-        height: 67px;
-        position: relative;
+        img#city:hover {
+          filter: grayscale(100%);
+          cursor: pointer;
+        }
+        section#Img1-text {
+          // background-color: white;
+          padding: 0;
+          font-size: 4em;
+          position: absolute;
+          // z-index: 3;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); // if I used image element
+          // transform: translate(-50%, -90%); // if I used the Img1 section
+          color: $whiteColor;
+          text-align: center;
+          text-shadow: 4px 4px 10px #000;
+        }
+      }
+      form {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        label {
+          color: $whiteColor;
+          font-size: 1.5rem;
+          margin: 1rem 0;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          background-color: $grayColor;
+          font-size: 1.25rem;
+          padding: 0.5rem;
+          border-radius: $radius;
+          border: none;
+          // background-color: $whiteColor;
+          transition: background-color 200ms linear;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+          border: none;
+          outline: 0;
+          background-color: $whiteColor;
+        }
+        textarea {
+          height: 200px;
+          margin-bottom: 1rem;
+        }
+        button#button {
+          background-color: $whiteColor;
+          color: $blueColor;
+          font-size: 1.5rem;
+          width: 50%;
+          padding: 1rem;
+          border-radius: $radius1;
+          border: none;
+          display: inline-block;
+          margin: 1rem auto 0 auto;
+          transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+          cursor: pointer;
+        }
+        button#button:hover {
+          background-color: $grayColor;
+          color: $whiteColor;
+        }
+      }
     }
+  }
+  footer {
+    background-color: red;
+    height: 67px;
+    position: relative;
+    width: 100%;
+  }
 }
-

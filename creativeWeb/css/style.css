@@ -2,8 +2,7 @@
 * {
   padding: 0%;
   margin: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -15,12 +14,8 @@
 }
 
 #container nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 1em 3em;
 }
 
@@ -39,8 +34,6 @@
 }
 
 #container nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin-left: auto;
@@ -61,8 +54,6 @@
 }
 
 #container main section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 1em 3em;
 }
@@ -77,13 +68,8 @@
   position: absolute;
   z-index: -1;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #container main section #leftCol #boldTxt h1 {
@@ -175,12 +161,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #container footer div.copy {
@@ -191,14 +173,10 @@
 #container footer div.century {
   color: white;
   padding-left: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 #container footer div#social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
   margin-right: 2em;

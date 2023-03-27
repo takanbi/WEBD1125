@@ -2,8 +2,7 @@
 * {
   padding: 0%;
   margin: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -37,8 +36,6 @@
   width: 100%;
   height: 400px;
   background-color: red;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /*
         The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
@@ -77,12 +74,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #container3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(violet));
   background-image: linear-gradient(red, orange, yellow, green, blue, violet);
 }
 
@@ -115,8 +110,6 @@
 }
 
 #container6 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
@@ -130,7 +123,6 @@
   width: 100px;
   height: 100px;
   display: block;
-  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
 
@@ -167,22 +159,13 @@
 }
 
 #container7 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#073C91), to(#000E7A));
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(#073C91, #000E7A);
 }
 
 #container7 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 80%;
 }
@@ -194,7 +177,6 @@
   width: 25%;
   margin: 0 0.5em;
   border-radius: 20px;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -210,10 +192,8 @@
 }
 
 #container7 section figure:hover {
-  -webkit-box-shadow: 20px 20px 20px #000D54;
-          box-shadow: 20px 20px 20px #000D54;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  box-shadow: 20px 20px 20px #000D54;
+  transform: scale(1.2);
   border: 0.15em solid red;
 }
 
